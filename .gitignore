@@ -1,0 +1,77 @@
+# Recall - .gitignore
+
+############################
+# Dependencies
+############################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+############################
+# Environment
+############################
+.env
+.env.local
+.env.*.local
+
+############################
+# Build output
+############################
+dist/
+build/
+out/
+coverage/
+
+############################
+# Logs
+############################
+logs/
+*.log
+
+############################
+# OS files
+############################
+.DS_Store
+Thumbs.db
+
+############################
+# IDEs
+############################
+.vscode/
+.idea/
+*.swp
+*.swo
+
+############################
+# Recall memory (optional safety)
+############################
+# Keep local memory out of git unless explicitly versioned
+.memory/
+!memory/.gitkeep
+
+############################
+# Neo4j local data (DO NOT COMMIT)
+############################
+neo4j/data/
+neo4j/logs/
+neo4j/import/
+neo4j/plugins/
+
+############################
+# Docker
+############################
+docker-compose.override.yml
+
+############################
+# Testing
+############################
+coverage/
+
+############################
+# Misc
+############################
+.DS_Store
+*.pid
+.tmp/
