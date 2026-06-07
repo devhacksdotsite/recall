@@ -1,0 +1,29 @@
+{
+  "name": "recall",
+  "version": "1.0.0",
+  "description": "**Persistent AI Memory for Kiro**",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devhacksdotsite/recall.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/devhacksdotsite/recall/issues"
+  },
+  "homepage": "https://github.com/devhacksdotsite/recall#readme",
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
