@@ -473,9 +473,3 @@ Store knowledge, not conversations.
 
 Recall focuses on preserving durable project intelligence rather than replaying chat history. The goal is to give Kiro access to the information that matters while keeping prompts concise, relevant, and cost-effective.
 
-## Run Neo4j
-
-```bash
-docker compose up -d
-```
-

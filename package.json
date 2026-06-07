@@ -2,12 +2,14 @@
   "name": "recall",
   "version": "1.0.0",
   "description": "**Persistent AI Memory for Kiro**",
-  "main": "index.js",
+  "main": "dist/index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,7 @@
   "homepage": "https://github.com/devhacksdotsite/recall#readme",
   "devDependencies": {
     "@types/node": "^25.9.2",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.22.4",
     "typescript": "^6.0.3"
   }
 }
