@@ -1,6 +1,7 @@
 import { loadConfig } from "./config";
 import { runCLI } from "./interfaces/cli";
 import { Neo4jService } from "./infrastructure/neo4j/Neo4jService";
+import { MemoryBootstrap } from "./infrastructure/memory/MemoryBootstrap";
 
 function printBanner() {
   console.log(`
@@ -22,6 +23,8 @@ async function main() {
 
   const config = loadConfig();
   printStatus(config);
+
+  MemoryBootstrap.initialize(config.memoryPath);
 
   const neo4j = new Neo4jService();
 

@@ -75,3 +75,6 @@ coverage/
 .DS_Store
 *.pid
 .tmp/
+
+.memory/*
+!.memory/.gitkeep
