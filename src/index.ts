@@ -1,7 +1,7 @@
-import { loadConfig } from "./config";
-import { runCLI } from "./interfaces/cli";
-import { Neo4jService } from "./infrastructure/neo4j/Neo4jService";
-import { MemoryBootstrap } from "./infrastructure/memory/MemoryBootstrap";
+import { loadConfig } from "./config/index.js";
+import { runCLI } from "./interfaces/cli/index.js";
+import { Neo4jService } from "./infrastructure/neo4j/Neo4jService.js";
+import { MemoryBootstrap } from "./infrastructure/memory/MemoryBootstrap.js";
 
 function printBanner() {
   console.log(`

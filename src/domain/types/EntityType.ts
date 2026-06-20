@@ -1,0 +1,7 @@
+export enum EntityType {
+  PROJECT = "PROJECT",
+  FEATURE = "FEATURE",
+  REQUIREMENT = "REQUIREMENT",
+  DECISION = "DECISION",
+  TASK = "TASK"
+}
