@@ -3,8 +3,12 @@ import { runCLI } from "./interfaces/cli/index.js";
 import { Neo4jService } from "./infrastructure/neo4j/Neo4jService.js";
 import { MemoryBootstrap } from "./infrastructure/memory/MemoryBootstrap.js";
 
+// Test imports
 import { GraphRepository } from "./infrastructure/neo4j/GraphRepository.js";
 import { Neo4jClient } from "./infrastructure/neo4j/Neo4jClient.js";
+import { MemoryStore } from "./infrastructure/memory/MemoryStore.js";
+import { ContextBuilder } from "./application/context/ContextBuilder.js";
+// END Test imports
 
 function printBanner() {
   console.log(`
@@ -53,6 +57,26 @@ async function testGraphRepo() {
   );
 }
 
+async function testContextBuilder(config) {
+  const client = new Neo4jClient();
+  const graph = new GraphRepository(client);
+
+  const memoryStore = new MemoryStore(
+    config.memoryPath
+  );
+
+  const contextBuilder =
+    new ContextBuilder(
+      memoryStore,
+      graph
+    );
+
+  const context =
+    await contextBuilder.build();
+
+  console.log(context);
+}
+
 async function main() {
   printBanner();
 
@@ -66,6 +90,9 @@ async function main() {
   await neo4j.testConnection();
 
   runCLI();
+
+  // Test context contextBuilder
+  testContextBuilder(config);
 
   await neo4j.shutdown();
 }
