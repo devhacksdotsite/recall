@@ -1,5 +1,6 @@
 import { Neo4jClient } from "./Neo4jClient";
 
+// Application lifecycle layer
 export class Neo4jService {
   private client: Neo4jClient;
 

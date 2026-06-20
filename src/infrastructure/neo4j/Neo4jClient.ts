@@ -1,6 +1,7 @@
 import neo4j from "neo4j-driver";
 import { loadConfig } from "../../config";
 
+// Transport layer - Low level infrastructure
 export class Neo4jClient {
   private driver;
 
@@ -11,6 +12,10 @@ export class Neo4jClient {
       config.neo4j.uri,
       neo4j.auth.basic(config.neo4j.user, config.neo4j.password)
     );
+  }
+
+  public getDriver() {
+    return this.driver;
   }
 
   async verifyConnection(): Promise<boolean> {

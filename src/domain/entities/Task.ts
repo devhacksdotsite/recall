@@ -1,4 +1,4 @@
-import { EntityType } from "../types/EntityType";
+import { EntityType } from "../types/EntityType.js";
 
 export interface Task {
   id: string;
