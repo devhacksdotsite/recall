@@ -10,27 +10,27 @@ export class ContextBuilder {
   async build(): Promise<string> {
     const summary =
       this.memoryStore.read(
-        "/project-summary.md"
+        "project-summary.md"
       );
 
     const architecture =
       this.memoryStore.read(
-        "/architecture.md"
+        "architecture.md"
       );
 
     const requirements =
       this.memoryStore.read(
-        "/requirements.md"
+        "requirements.md"
       );
 
     const decisions =
       this.memoryStore.read(
-        "/decisions.md"
+        "decisions.md"
       );
 
     const tasks =
       this.memoryStore.read(
-        "/tasks.md"
+        "tasks.md"
       );
 
     const projectNode =

@@ -57,7 +57,8 @@ async function testGraphRepo() {
   );
 }
 
-async function testContextBuilder(config) {
+async function testContextBuilder(config: ReturnType<typeof loadConfig>
+) {
   const client = new Neo4jClient();
   const graph = new GraphRepository(client);
 
